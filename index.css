@@ -1,0 +1,176 @@
+@import './css/color.css';
+/*Estilos generales*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--Green-200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+/*Estilo para el formulario*/
+.container-main {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 550px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-data, .input-type, .message {
+  margin-bottom: 20px;
+}
+
+.input-data-names {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.input-data-names-first, .input-data-names-last {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--Grey-500);
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: var(--Green-600); /* Color al enfocar */
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+.input-type {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.querytype-general,
+.querytype-feedback {
+  border: 1px solid var(--Grey-500);
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex; /* Cambiar a flex para mejor alineación */
+  align-items: center; /* Centrar contenido verticalmente */
+  transition: background-color 0.3s; /* Transición suave */
+}
+p{
+  margin-left: 10px;}
+
+.input-type div.selected {
+  background-color: var(--Green-200); /* Fondo verde cuando seleccionado */
+}
+
+textarea {
+  resize: none;
+}
+.submit {
+  margin-top: 35px;
+}
+button {
+  background-color: var(--Green-600);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+  background-color: var(--Grey-900);
+}
+
+label::after {
+  content: ' *';
+  color: var(--Green-600);
+  margin-left: 10px;
+}
+
+.error {
+  color: var(--Red);
+  display: block;
+  margin: 10px 0;
+  font-weight: bold; /* Aumentar el contraste */
+}
+
+/* Mejora en los bordes de inputs */
+input,
+textarea {
+  border: 1px solid var(--Grey-500);
+  cursor: pointer;
+}
+
+input:hover,
+textarea:hover {
+  border-color: var(--Green-600); /* Cambio de color al pasar el mouse */
+}
+
+/* Enfocar inputs y botones */
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none; /* Eliminar contorno predeterminado */
+  box-shadow: 0 0 5px var(--Green-600); /* Agregar sombra al enfocar */
+}
+/*Estilos para el mensaje de alerta*/
+.alert-hidden{
+  border-radius: 10px;
+  padding: 20px;  
+  background-color: var(--Grey-900);
+  color: white;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+.alert-thanks{
+  color: var(--Grey-500);
+  width: 100%;
+} 
+.alert-message{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+/*Estilos para checkbox*/
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.checkbox label {
+  margin-bottom: 0;
+}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FormValidation</title>
+  </head>
+  <body>
+    <!-- contenedor para alerta -->
+    <div id="alert" class="alert-hidden">
+      <div class="alert-message">
+        <img
+          src="./assets/images/icon-success-check.svg"
+          alt="icon-checkbox-check"
+        />
+        <span>Message Sent!</span>
+      </div>
+      <div class="alert-thanks">
+        <p>Thanks for completing the form. We'll be in touch soon</p>
+      </div>
+    </div>
+    <main class="container-main">
+      <!-- el formulario -->
+      <form id="form" class="form" method="post">
+        <h2>Contact Us</h2>
+        <!-- ingreo de nombres y email -->
+        <div class="input-data">
+          <div class="input-data-names">
+            <div class="input-data-names-first">
+              <label for="firstname">First Name</label>
+              <input type="text" id="firstname" maxlength="10" autofocus />
+              <span id="error-firstname" class="error"></span>
+            </div>
+            <div class="input-data-names-last">
+              <label for="lastname">Last Name</label>
+              <input type="text" id="lastname" maxlength="10" />
+              <span id="error-lastname" class="error"></span>
+            </div>
+          </div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" />
+          <span id="error-email" class="error"></span>
+        </div>
+        <!-- seleccionar tipo de consulta -->
+        <label for="querytype">Query Type</label>
+        <div class="input-type">
+          <div class="querytype-general" id="querytype">
+            <input type="radio" id="general" name="query" value="general" />
+            <p for="general">General Enquiry</p>
+          </div>
+          <div class="querytype-feedback" id="querytype">
+            <input type="radio" id="feedback" name="query" value="feedback" />
+            <p for="feedback">Feedback</p>
+          </div>
+        </div>
+        <span id="error-query" class="error"></span>
+        <!-- textarea -->
+        <div class="message">
+          <label for="message">Message</label>
+          <textarea id="message" cols="30" rows="4"></textarea>
+          <span id="error-message" class="error"></span>
+        </div>
+        <!-- checkbox contacto-->
+        <div class="contact">
+          <div class="checkbox">
+            <input type="checkbox" id="contact" name="contact" />
+            <label for="checkbox">I consent to being contacted by team</label>
+          </div>
+          <span id="error-contact" class="error"></span>
+        </div>
+        <!-- el button -->
+        <div class="submit">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+    <script src="./scripts/form.js"></script>
+    <script src="./scripts/helpfunctions.js"></script>
+    <script src="./scripts/validators.js"></script>
+  </body>
+</html>
